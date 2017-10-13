@@ -14,10 +14,12 @@ source /usr/local/bin/virtualenvwrapper.sh
 mkvirtualenv botinder
 ```
 
-### Start environment
+### Start environment and server
 ```[bash]
 workon botinder
 pip3 install -r requirements.txt
+export FLASK_APP=server/server.py
+flask run
 ```
 
 ### Leave environment
