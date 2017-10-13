@@ -1,21 +1,31 @@
 import React, {Component} from 'react';
-import Image from "./image";
+import { Carousel } from 'react-responsive-carousel';
 
 class ImageSlider extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            images: props.images
-        };
+        let i = 0;
+        this.images = props.images.map((image) => {
+            ++i;
+            return (
+                <div key={i}>
+                    <img src={image}/>
+                </div>
+            );
+        });
     }
 
     render() {
-        const images = this.state.images;
+        const images = this.images;
 
         if (!images || !images.length) {
             return <p>Fetching data...</p>;
         } else {
-            return <Image image={images[0]}/>;
+            return (
+                <Carousel autoPlay>
+                    {images}
+                </Carousel>
+            );
         }
     }
 }
