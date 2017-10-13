@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
+import Image from "./image";
 
 class ImageSlider extends Component {
     constructor(props) {
         super(props);
-
         this.state = {
             images: props.images
         };
@@ -15,7 +15,7 @@ class ImageSlider extends Component {
         if (!images || !images.length) {
             return <p>Fetching data...</p>;
         } else {
-            return <div>Hola</div>;
+            return <Image image={images[0]}/>;
         }
     }
 }
