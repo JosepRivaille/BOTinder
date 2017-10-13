@@ -38,6 +38,16 @@ class App extends Component {
             })
     }
 
+    valorateProfile(liked) {
+        axios.post(this.API_PROFILE_1, {liked})
+            .then(function () {
+                this.getProfile();
+            })
+            .catch(function (err) {
+                console.error(err);
+            })
+    }
+
     render() {
         if (!this.state.profile) {
             return <p>Fetching data...</p>;
@@ -45,8 +55,8 @@ class App extends Component {
             return (
                 <div>
                     <ImageSlider images={this.state.profile.images}/>
-                    <Description/>
-                    <ButtonsBar/>
+                    <Description description={this.state.profile.description}/>
+                    <ButtonsBar onValorationClick={this.valorateProfile}/>
                 </div>
             );
         }
