@@ -22,7 +22,7 @@ class ImageSlider extends Component {
             return <p>Fetching data...</p>;
         } else {
             return (
-                <Carousel autoPlay>
+                <Carousel autoPlay infiniteLoop showIndicators showArrows className="card-image">
                     {images}
                 </Carousel>
             );

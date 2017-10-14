@@ -21,8 +21,8 @@ class ValorationButton extends Component {
         const liked = this.state.liked;
 
         return (
-            <button className="btn waves-effect waves-light" style={{backgroundColor: color}}
-                    onClick={this.onValorationClick(liked)}><i className={iconClasses}/></button>
+            <a className="waves-effect waves-light btn cool-button" style={{backgroundColor: color}}
+               onClick={this.onValorationClick(liked)}><i className={iconClasses}/></a>
         );
     }
 }

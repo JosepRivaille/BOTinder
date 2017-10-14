@@ -27,7 +27,7 @@ class ButtonsBar extends Component {
         };
 
         return (
-            <div>
+            <div className="center-align button-container">
                 <ValorationButton onValorationClick={this.onValorationClick} value={likeButton}/>
                 <ValorationButton onValorationClick={this.onValorationClick} value={dislikeButton}/>
             </div>

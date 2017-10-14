@@ -6,6 +6,7 @@ import axios from 'axios';
 import ButtonsBar from "./components/buttons_bar";
 import Description from "./components/description";
 import ImageSlider from "./components/image_slider";
+import ModeSwap from "./components/ModeSwap";
 
 class App extends Component {
 
@@ -48,15 +49,20 @@ class App extends Component {
             })
     }
 
+    swapMode() {
+
+    }
+
     render() {
         if (!this.state.profile) {
             return <p>Fetching data...</p>;
         } else {
             return (
-                <div>
+                <div className="fill-height card card-style">
                     <ImageSlider images={this.state.profile.images}/>
                     <Description description={this.state.profile.description}/>
                     <ButtonsBar onValorationClick={this.valorateProfile}/>
+                    <ModeSwap onClickFAB={this.swapMode}/>
                 </div>
             );
         }

@@ -11,7 +11,7 @@ class Description extends Component {
     }
 
     render() {
-        return <div>Hola</div>;
+        return <div>Description bla bla bla</div>;
     }
 }
 
