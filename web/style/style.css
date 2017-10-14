@@ -7,3 +7,7 @@ body {
     background: -moz-linear-gradient(45deg, #EE0084, #FF7D24);
     background: linear-gradient(45deg, #EE0084, #FF7D24);
 }
+
+.thumb {
+    width: 100% !important;
+}
